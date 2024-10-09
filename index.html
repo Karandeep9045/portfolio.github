@@ -110,24 +110,24 @@
 		.zoom-effect:hover {
 			transform: scale(1.1);
 		}
-		.one-third {
-    background-size: cover; /* Ensures the image covers the container fully */
-    background-position: center; /* Centers the image */
-    height: 100%; /* Full height of the parent */
-    width: 100%; /* Full width of the parent */
+	/* For all screen sizes */
+.one-third {
+    background-size: contain; /* Ensures the image fits within the div while maintaining aspect ratio */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating of the background image */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height for larger screens */
 }
 
+/* Specific adjustments for mobile devices */
 @media (max-width: 768px) {
     .one-third {
-        height: 50vh; /* Adjust height for smaller screens (like mobile) */
+        height: auto; /* Auto adjusts height */
+        padding-top: 75%; /* Adjust padding to maintain aspect ratio, tweak this as needed */
+        background-size: cover; /* Ensures the image covers the container */
     }
 }
 
-@media (min-width: 769px) {
-    .one-third {
-        height: 100vh; /* For larger screens, keep the full viewport height */
-    }
-}
 
 	</style>
 
