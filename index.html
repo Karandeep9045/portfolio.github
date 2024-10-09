@@ -110,6 +110,25 @@
 		.zoom-effect:hover {
 			transform: scale(1.1);
 		}
+		.one-third {
+    background-size: cover; /* Ensures the image covers the container fully */
+    background-position: center; /* Centers the image */
+    height: 100%; /* Full height of the parent */
+    width: 100%; /* Full width of the parent */
+}
+
+@media (max-width: 768px) {
+    .one-third {
+        height: 50vh; /* Adjust height for smaller screens (like mobile) */
+    }
+}
+
+@media (min-width: 769px) {
+    .one-third {
+        height: 100vh; /* For larger screens, keep the full viewport height */
+    }
+}
+
 	</style>
 
 
